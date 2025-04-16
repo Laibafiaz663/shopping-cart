@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { products } from "../products";
-import "./home.css";
+import "./Home.css";
 import Navbar from "./Navbar";
 import { cartcontext } from "../App";
 
