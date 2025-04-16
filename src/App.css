@@ -1,0 +1,31 @@
+.container {
+  max-width: 1300px;
+}
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: cornflowerblue;
+}
+.cart-icon {
+  position: relative;
+}
+.cart-badge {
+  color: red;
+  background-color: white;
+  width: 20px;
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+i.fs-4 {
+  font-size: 2rem !important;
+}

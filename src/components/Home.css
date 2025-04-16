@@ -1,0 +1,31 @@
+.card-wrapper {
+  padding-top: 5rem;
+}
+
+.card-wrapper img {
+  aspect-ratio: 1/1;
+  padding: 1rem;
+}
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card {
+  height: 100%;
+  position: relative;
+  padding-bottom: 5rem;
+}
+.card-inner [class*="col-md"] {
+  margin-bottom: 1rem;
+}
+.card-inner .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 2rem;
+}
