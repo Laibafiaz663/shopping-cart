@@ -3,10 +3,20 @@ import { products } from "../products";
 import "./Home.css";
 import Navbar from "./Navbar";
 import { cartcontext } from "../App";
+import Sidebar from "./Sidebar";
 
 function Home() {
+  const [showSidebar, setShowSidebar] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const [productlist, setProductlist] = useState(products);
   const cartContext = useContext(cartcontext);
+  const openSidebar = (product) => {
+    setSelectedProduct(product);
+    setShowSidebar(true);
+  };
+  const closeSidebar = () => {
+    setShowSidebar(false);
+  };
 
   const handlecart = (prod) => {
     cartContext.setCart([...cartContext.cart, prod]);
@@ -15,6 +25,11 @@ function Home() {
   return (
     <div>
       <Navbar />
+      <Sidebar
+        show={showSidebar}
+        product={selectedProduct}
+        onClose={closeSidebar}
+      />
       <div className="card-wrapper">
         <div className="container">
           <div className="card-inner">
@@ -22,7 +37,11 @@ function Home() {
               {productlist.map((product) => {
                 return (
                   <div className="col-md-3">
-                    <div className="card">
+                    <div
+                      className="card"
+                      style={{ cursor: "pointer" }}
+                      onClick={() => openSidebar(product)}
+                    >
                       <img
                         src={product.image}
                         className="card-img-top"

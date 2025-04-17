@@ -29,3 +29,38 @@
 i.fs-4 {
   font-size: 2rem !important;
 }
+/* sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px; /* hidden */
+  width: 300px;
+  height: 100vh;
+  background: rgb(68, 67, 67);
+  transition: right 0.3s ease;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.sidebar.show {
+  right: 0; /* visible */
+}
+
+.sidebar-inner {
+  padding: 20px;
+  position: relative;
+}
+.sidebar-inner button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.sidebar-inner .card {
+  background-color: transparent;
+  color: white;
+}
